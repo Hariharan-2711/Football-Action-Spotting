@@ -324,14 +324,14 @@ def test_pass_detection(
         else:
             print(f" No sequence_length in checkpoint, using default: {sequence_length}")
         
-        # ✅ NEW: Get input_size from checkpoint
+        # Get input_size from checkpoint
         if 'input_size' in checkpoint:
             input_size = checkpoint['input_size']
             print(f" Input size: {input_size}D {'(with velocity)' if input_size == 44 else ''}")
         else:
             print(f"  No input_size in checkpoint, using default: {input_size}D")
         
-        # ✅ NEW: Get batchnorm setting
+        # Get batchnorm setting
         if 'use_batchnorm' in checkpoint:
             use_batchnorm = checkpoint['use_batchnorm']
             print(f" BatchNorm: {'enabled' if use_batchnorm else 'disabled'}")

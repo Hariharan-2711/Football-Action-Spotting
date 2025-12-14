@@ -103,11 +103,7 @@ def balance_dataset(sequences, labels, target_count=None, augment=True):
     
     return balanced_sequences, balanced_labels
 
-
-# ============================================================================
 # Parse Ground Truth Labels
-# ============================================================================
-
 def parse_ball_action_labels(
     json_path: str, 
     labels_to_track: List[str] = None,
@@ -148,11 +144,7 @@ def parse_ball_action_labels(
     
     return frame_labels, label_counts
 
-
-# ============================================================================
 # Smart Data Extractor
-# ============================================================================
-
 class SmartSoccerNetExtractor:
     """Extract training data with label grouping."""
     
